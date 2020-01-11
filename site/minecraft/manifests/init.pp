@@ -1,8 +1,8 @@
 class minecraft (
   $url = 'https://launcher.mojang.com/v1/objects/4d1826eebac84847c71a77f9349cc22afd0cf0a1/server.jar',
-  $inst_dir = '/opt/minecraft'
+  $install_dir = '/opt/minecraft'
 ) {
-  file{ $inst_dir:
+  file{ $install_dir:
     ensure => directory,
     owner  => 'root',
     group  => 'root',
@@ -10,7 +10,7 @@ class minecraft (
   
   notify { 'downloading...this may take a minute': 
   } ->
-  file { "${inst_dir}/minecraft_server.jar":
+  file { "${install_dir}/minecraft_server.jar":
     ensure  => file,
     source  => $url,
   }
@@ -19,7 +19,7 @@ class minecraft (
     ensure  => present,
   }
   
-  file { "${inst_dir}eula.txt":
+  file { "${install_dir}eula.txt":
     ensure  => file,
     content => 'eula=true',
   }
