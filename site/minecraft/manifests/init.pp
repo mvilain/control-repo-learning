@@ -8,7 +8,7 @@ class minecraft (
     group  => 'root',
   }
   
-  notify { 'downloading...this may take a minute': 
+  notify { 'downloading jar...this may take a minute': 
   } ->
   file { "${install_dir}/minecraft_server.jar":
     ensure  => file,
