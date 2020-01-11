@@ -5,6 +5,9 @@ class minecraft {
     group  => 'root',
   }
   
+  notify { '/opt/minecraft/minecraft_server.jar':
+    message => 'downloading minecraft jar file...this may take a minute',
+  } ->
   file { '/opt/minecraft/minecraft_server.jar':
     ensure  => file,
     source  => 'https://launcher.mojang.com/v1/objects/4d1826eebac84847c71a77f9349cc22afd0cf0a1/server.jar',
