@@ -26,8 +26,8 @@ class minecraft (
   
   file { '/etc/systemd/system/minecraft.service':
     ensure  => file,
-    content => template('minecraft/minecraft.services.erb'),
-    #content => epp('minecraft/minecraft.services',{ 
+    content => template('minecraft/minecraft.service.erb'),
+    #content => epp('minecraft/minecraft.service',{ 
     #  install_dir => $install_dir
     #} )
   }
