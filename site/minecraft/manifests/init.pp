@@ -6,7 +6,7 @@ class minecraft {
   }
   
   notify { '/opt/minecraft/minecraft_server.jar':
-    message => 'downloading minecraft jar file...this may take a minute',
+    message => 'downloading jar file...this may take a minute',
   } ->
   file { '/opt/minecraft/minecraft_server.jar':
     ensure  => file,
