@@ -17,3 +17,7 @@ node /^web/ {
 node /^db/ {
   include role::db_server
 }
+
+node 'mindcraft.puppet.vm' {
+  include role::mindcraft_server
+}
