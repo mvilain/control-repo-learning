@@ -28,7 +28,7 @@ class minecraft (
     ensure  => file,
     content => template('minecraft/minecraft.services.erb'),
 #    content => epp('minecraft/minecraft.services',{ 
-#      inst_dir = $inst_dir
+#      install_dir => $install_dir
 #    } )
     source  => 'puppet:///modules/minecraft/minecraft.service',
 
