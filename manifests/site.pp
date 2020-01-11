@@ -13,6 +13,7 @@ node 'master.puppet.vm' {
   }
   host { 'db':
     ip  => '172.18.0.3',
+  }
 }
 
 node /^web/ {
