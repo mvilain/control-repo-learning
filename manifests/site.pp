@@ -8,6 +8,11 @@ node 'master.puppet.vm' {
     ensure  => file,
     content => "# Welcome to ${fqdn}\n",
   }
+  host { 'web':
+    ip  => '172.18.0.2',
+  }
+  host { 'db':
+    ip  => '172.18.0.3',
 }
 
 node /^web/ {
