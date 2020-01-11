@@ -10,6 +10,8 @@ sudo echo "[agent]" >> /etc/puppetlabs/puppet/puppet.conf
 sudo echo "server = master.puppet.vm" >> /etc/puppetlabs/puppet/puppet.conf 
 sudo systemctl enable puppetserver
 sudo systemctl start puppetserver
+sudo mkdir /etc/puppetlabs/r10k
+sudo /opt/puppetlabs/puppet/bin/gem install r10k
 EOF
 
 
