@@ -19,7 +19,7 @@ class minecraft (
     ensure  => present,
   }
   
-  file { "${install_dir}eula.txt":
+  file { "${install_dir}/eula.txt":
     ensure  => file,
     content => 'eula=true',
   }
