@@ -1,7 +1,7 @@
-class minecraft {
-  $url = 'https://launcher.mojang.com/v1/objects/4d1826eebac84847c71a77f9349cc22afd0cf0a1/server.jar'
+class minecraft (
+  $url = 'https://launcher.mojang.com/v1/objects/4d1826eebac84847c71a77f9349cc22afd0cf0a1/server.jar',
   $inst_dir = '/opt/minecraft'
- 
+) {
   file{ $inst_dir:
     ensure => directory,
     owner  => 'root',
