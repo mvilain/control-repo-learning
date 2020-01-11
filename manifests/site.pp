@@ -18,6 +18,6 @@ node /^db/ {
   include role::db_server
 }
 
-node 'mindcraft.puppet.vm' {
+node 'mindtest.puppet.vm' {
   include role::mindcraft_server
 }
