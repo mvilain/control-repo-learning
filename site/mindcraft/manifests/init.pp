@@ -15,7 +15,7 @@ class minecraft {
   }
   
   file { '/opt/mindcraft/eula.txt':
-    ensure => file,
+    ensure  => file,
     content => 'eula=true',
   }
   
@@ -23,5 +23,10 @@ class minecraft {
     ensure => file,
     source => 'puppet:///modules/mindcraft/mindcraft.service',
   }
-  # java -Xmx1024M -Xms1024M -jar minecraft_server.1.15.1.jar nogui 
+  
+  service { 'mindcraft':
+    ensure  => running,
+    enabled => true,
+  }
+
 }
